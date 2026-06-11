@@ -1,4 +1,4 @@
-# ECGR4106-HW--CIFAR10-CNNs
+# ECGR4106-HW1-CIFAR10-CNNs
 This repo will contain my code files for ECGR 4106 Homework 1.
 
 The homework focuses on training and comparing CNN architectures on the CIFAR-10 dataset using Pytorch 

@@ -3,10 +3,9 @@
 **Student:** Andrew Dominguez Luna  
 **Course:** ECGR 4106 Deep Learning  
 **Homework:** Homework 1  
-**Dataset:** CIFAR-10  
-**Framework:** PyTorch  
+**Student ID:** 801375584 
 
-This repository contains the source code for Homework 1. The assignment compares Modified AlexNet, Adapted VGGNet, ResNet-11, and ResNet-18 on CIFAR-10. Each model uses the same train/validation/test split and the same training pipeline.
+This repository contains the source code for Homework 1. The assignment compares a Modified AlexNet, a Adapted VGGNet, a ResNet-11, and a ResNet-18 on CIFAR-10. Each model uses the same train/validation/test split and the same training pipeline.
 
 ## Repository Layout
 
@@ -68,7 +67,7 @@ Random seed: `42`
 3. Run:
 
 ```python
-!git clone https://github.com/YOUR_USERNAME/ECGR4106-HW1-CIFAR10-CNNs.git
+!git clone https://github.com/adomin10-prog/ECGR4106-HW1-CIFAR10-CNNs.git
 %cd ECGR4106-HW1-CIFAR10-CNNs
 !pip install -r requirements.txt
 ```

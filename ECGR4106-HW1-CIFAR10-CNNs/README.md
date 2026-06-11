@@ -67,8 +67,8 @@ Random seed: `42`
 3. Run:
 
 ```python
-!git clone https://github.com/adomin10-prog/ECGR4106-HW1-CIFAR10-CNNs.git
-%cd ECGR4106-HW1-CIFAR10-CNNs
+!git clone https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs.git
+%cd ECGR4106-HW--CIFAR10-CNNs/ECGR4106-HW1-CIFAR10-CNNs
 !pip install -r requirements.txt
 ```
 

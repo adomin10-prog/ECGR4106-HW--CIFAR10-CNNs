@@ -69,7 +69,7 @@ Random seed: `42`
 
 ```python
 !git clone https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs.git
-%cd ECGR4106-HW1-CIFAR10-CNNs
+%cd ECGR4106-HW--CIFAR10-CNNs
 !pip install -r requirements.txt
 ```
 

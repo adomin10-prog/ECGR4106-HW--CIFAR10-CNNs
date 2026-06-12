@@ -68,9 +68,19 @@ Random seed: `42`
 3. Run:
 
 ```python
-!git clone https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs.git
+ !git clone https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs.git
 %cd ECGR4106-HW--CIFAR10-CNNs
 !pip install -r requirements.txt
+
+# Run professional verification script
+!python run_verification.py --mode verification
+
+# Display verification results
+import pandas as pd
+from IPython.display import display, Image
+
+display(pd.read_csv("verification_results/verification_summary.csv"))
+display(Image(filename="verification_results/verification_accuracy_bar_chart.png"))
 ```
 
 Check GPU:

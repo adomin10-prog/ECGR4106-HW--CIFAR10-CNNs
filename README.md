@@ -1,6 +1,5 @@
 # ECGR 4106 Homework 1: CIFAR-10 CNN Comparison
 
-**Student:** Andrew Dominguez Luna  
 **Course:** ECGR 4106 Deep Learning  
 **Homework:** Homework 1  
 **Dataset:** CIFAR-10  

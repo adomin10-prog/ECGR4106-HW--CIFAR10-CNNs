@@ -70,19 +70,19 @@ To run this repository in Google Colab:
 4. Run the following cell:
 
 ```python
- !git clone https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs.git
+!git clone https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs.git
 %cd ECGR4106-HW--CIFAR10-CNNs
 !pip install -r requirements.txt
 
-# Run professional verification script
-!python run_verification.py --mode verification
+# Run full homework experiments
+!python run_verification.py --mode full
 
-# Display verification results
+# Display full experiment results
 import pandas as pd
 from IPython.display import display, Image
 
-display(pd.read_csv("verification_results/verification_summary.csv"))
-display(Image(filename="verification_results/verification_accuracy_bar_chart.png"))
+display(pd.read_csv("results/full_experiment_summary.csv"))
+display(Image(filename="results/full_experiment_accuracy_bar_chart.png"))
 ```
 
 This cell downloads the GitHub repository, moves into the project folder, installs the required Python packages, runs the repository verification script, and displays the generated results.

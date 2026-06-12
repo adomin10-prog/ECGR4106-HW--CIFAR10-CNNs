@@ -63,9 +63,12 @@ Random seed: `42`
 
 ## Run in Google Colab
 
-1. Open Colab.
-2. Go to `Runtime → Change runtime type → Hardware accelerator → T4 GPU`.
-3. Run:
+To run this repository in Google Colab:
+
+1. Open Google Colab.
+2. Go to `Runtime → Change runtime type`.
+3. Set the hardware accelerator to `T4 GPU`.
+4. Run the following cell:
 
 ```python
  !git clone https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs.git
@@ -83,93 +86,7 @@ display(pd.read_csv("verification_results/verification_summary.csv"))
 display(Image(filename="verification_results/verification_accuracy_bar_chart.png"))
 ```
 
-Check GPU:
+This cell downloads the GitHub repository, moves into the project folder, installs the required Python packages, runs the repository verification script, and displays the generated results.
 
-```python
-import torch
-print(torch.cuda.is_available())
-print(torch.cuda.get_device_name(0) if torch.cuda.is_available() else "No GPU")
-```
+The verification script trains each required model and dropout configuration for a short run to confirm that the repository is working correctly. After it finishes, the notebook displays a summary table and an accuracy bar chart from the `verification_results/` folder.
 
-Run one experiment:
-
-```python
-!python train.py --model alexnet --dropout 0.0 --epochs 30 --lr 0.01
-```
-
-## Main Experiment Commands
-
-### Problem 1: Modified AlexNet
-
-```bash
-python train.py --model alexnet --dropout 0.0 --epochs 30 --lr 0.01
-python train.py --model alexnet --dropout 0.3 --epochs 30 --lr 0.01
-python train.py --model alexnet --dropout 0.5 --epochs 30 --lr 0.01
-```
-
-### Problem 2: Adapted VGGNet
-
-```bash
-python train.py --model vgg --dropout 0.0 --epochs 30 --lr 0.01
-python train.py --model vgg --dropout 0.3 --epochs 30 --lr 0.01
-python train.py --model vgg --dropout 0.5 --epochs 30 --lr 0.01
-```
-
-### Problem 3: ResNet-11 and ResNet-18
-
-```bash
-python train.py --model resnet11 --dropout 0.0 --epochs 50 --lr 0.1
-python train.py --model resnet11 --dropout 0.3 --epochs 50 --lr 0.1
-python train.py --model resnet11 --dropout 0.5 --epochs 50 --lr 0.1
-
-python train.py --model resnet18 --dropout 0.0 --epochs 50 --lr 0.1
-python train.py --model resnet18 --dropout 0.3 --epochs 50 --lr 0.1
-python train.py --model resnet18 --dropout 0.5 --epochs 50 --lr 0.1
-```
-
-## Output Files
-
-Each experiment creates a folder in `results/`, for example:
-
-```text
-results/alexnet_dropout00/
-```
-
-Each result folder contains:
-
-| File | Purpose |
-|---|---|
-| `config.json` | Hyperparameters, seed, hardware, parameter count |
-| `training_log.csv` | Training and validation metrics per epoch |
-| `final_results.json` | Final test loss, test accuracy, best validation accuracy |
-| `loss_curve.png` | Training loss vs validation loss |
-| `val_accuracy_curve.png` | Validation accuracy curve |
-| `confusion_matrix.png` | Test-set confusion matrix |
-| `best_model.pt` | Best model checkpoint, ignored by Git by default |
-
-The `.pt` files are ignored by Git because they can be large. Commit the CSV, JSON, and PNG files for the final submission.
-
-## Summary Table and Bar Chart
-
-After all experiments are complete:
-
-```bash
-python plot_summary.py
-```
-
-This creates:
-
-```text
-results/summary_table.csv
-results/best_model_test_accuracy_bar_chart.png
-```
-
-## Quick Model Test
-
-```bash
-python quick_model_test.py
-```
-
-## Final Submission
-
-The PDF report should include your name, student ID, homework number, and the public GitHub repository link.

@@ -7,6 +7,9 @@
 
 This repository contains the source code for Homework 1. The assignment compares Modified AlexNet, Adapted VGGNet, ResNet-11, and ResNet-18 on CIFAR-10. Each model uses the same train/validation/test split and the same training pipeline.
 
+direct link to hw1
+https://colab.research.google.com/github/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs/blob/main/HW1.ipynb
+
 ## Repository Layout
 
 ```text

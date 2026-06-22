@@ -9,7 +9,7 @@ GitHub repository:
 `https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs`
 
 LINK TO EXICUTED HTML 
-
+https://github.com/adomin10-prog/ECGR4106-HW--CIFAR10-CNNs/blob/main/HW1_No_Images.ipynb
 
 ## 1. Set Google Colab to GPU
 
